@@ -1,0 +1,35 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 06/04/19 by USER
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = Application.SldWorks
+
+
+' Open
+Set Part = swApp.OpenDoc6("Y:\tmp\cnc-Milling-machine\死神面具\面具.SLDPRT", 1, 0, "", longstatus, longwarnings)
+
+' Open
+Set Part = swApp.OpenDoc6("D:\Esme\CNC\銑床\死神面具\面具.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActivateDoc2 "面具.SLDPRT", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+
+' Save As
+longstatus = Part.SaveAs3("D:\Esme\CNC\銑床\死神面具\面具.IGS", 0, 0)
