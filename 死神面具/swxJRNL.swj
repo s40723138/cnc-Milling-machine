@@ -11,3 +11,5 @@ Sub main()
 
 Set swApp = Application.SldWorks
 
+swApp.ExitApp
+End Sub
